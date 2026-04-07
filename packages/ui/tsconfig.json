@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "types": ["node"],
+    "rewriteRelativeImportExtensions": false,
+    "paths": {
+      "@kunst/ui/rules-config": ["./rules.config.ts"]
+    }
+  },
+  "include": [
+    "rules.config.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "scripts/**/*.ts"
+  ],
+  "exclude": ["dist", "node_modules"]
+}

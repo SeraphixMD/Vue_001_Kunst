@@ -1,0 +1,50 @@
+{
+  "name": "@kunst/eslint-plugin-ui",
+  "version": "0.0.0",
+  "description": "ESLint rules enforcing @kunst/ui design-language invariants. Reads from @kunst/ui/rules-config.",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist"],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.18.0",
+    "vue-eslint-parser": "^10.0.0"
+  },
+  "devDependencies": {
+    "@kunst/ui": "workspace:*",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/rule-tester": "^8.18.0",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

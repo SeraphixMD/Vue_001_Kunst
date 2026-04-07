@@ -1,0 +1,37 @@
+{
+  "name": "kunst-ui-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "lint": "bash scripts/ci/lint.sh",
+    "test": "bash scripts/ci/test.sh",
+    "build": "bash scripts/ci/build.sh",
+    "e2e": "bash scripts/ci/e2e.sh",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "verify:rule-coverage": "pnpm --filter @kunst/ui verify:rule-coverage",
+    "verify:file": "tsx scripts/verify-file.ts",
+    "verify:quick": "bash scripts/verify-quick.sh",
+    "verify:full": "pnpm verify:quick && pnpm test && pnpm e2e && pnpm release-check",
+    "release-check": "bash scripts/ci/release-check.sh",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.5.2",
+    "eslint": "^10.2.0",
+    "eslint-plugin-vue": "^10.8.0",
+    "jiti": "^2.6.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0",
+    "vue-eslint-parser": "^10.4.0"
+  }
+}

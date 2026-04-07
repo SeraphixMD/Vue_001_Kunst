@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "@kunst/ui/styles.css";
+
+/*
+ * Sink-local chrome styles. The library's tokens + base layer come from
+ * the @kunst/ui import above; anything below is page-layout utility only,
+ * allowed on non-library elements per the sink's CLAUDE.md.
+ */
+html,
+body,
+#app {
+  min-height: 100vh;
+}

@@ -1,0 +1,17 @@
+/**
+ * Library CSS entry point. Consumers import this alongside Tailwind:
+ *
+ *   @import "tailwindcss";
+ *   @import "@kunst/ui/styles.css";
+ *
+ * The consumer owns the `@import "tailwindcss"` — it must be at the top level
+ * of their CSS entry, not nested inside this file. This file only provides:
+ *   - @theme tokens (colors, radii, typography, z-index, shadows)
+ *   - @layer base resets + dark-mode variant
+ *   - @source directive for Tailwind to scan library component files
+ */
+
+@import './tokens.css';
+@import './base.css';
+
+@source '../components/**/*.{vue,ts}';

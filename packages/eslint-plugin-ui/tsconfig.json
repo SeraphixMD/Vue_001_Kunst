@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "@kunst/ui/rules-config": ["../ui/rules.config.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts", "../ui/rules.config.ts"],
+  "exclude": ["dist", "node_modules"]
+}

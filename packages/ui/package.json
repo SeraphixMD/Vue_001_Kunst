@@ -1,0 +1,86 @@
+{
+  "name": "@kunst/ui",
+  "version": "0.0.0",
+  "description": "Opinionated Vue 3 component library with locked visual design, built on Reka UI and Tailwind CSS v4.",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "templates",
+    ".claude/skills"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./styles.css": "./src/styles/index.css",
+    "./rules-config": {
+      "types": "./rules.config.ts",
+      "import": "./rules.config.ts",
+      "default": "./rules.config.ts"
+    },
+    "./claude-template": "./templates/CLAUDE.consumer.md.template",
+    "./skills/*": "./.claude/skills/*"
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./styles.css": "./dist/styles.css",
+      "./rules-config": {
+        "types": "./dist/rules.config.d.ts",
+        "import": "./dist/rules.config.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc --project tsconfig.build.json --declaration --emitDeclarationOnly",
+    "dev": "vite build --watch",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint --config ../../eslint.config.ts src",
+    "verify:rule-coverage": "tsx scripts/verify-rule-coverage.ts",
+    "generate:docs": "tsx scripts/generate-claude-sections.ts"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "nuxt": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "reka-ui": "^2.9.3",
+    "tailwind-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "@kunst/eslint-plugin-ui": "workspace:*",
+    "@tailwindcss/vite": "^4.2.2",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitest/browser": "^2.1.9",
+    "@vue/server-renderer": "^3.5.13",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^29.0.1",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vite-plugin-dts": "^4.5.0",
+    "vitest": "^2.1.8",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.0"
+  }
+}
