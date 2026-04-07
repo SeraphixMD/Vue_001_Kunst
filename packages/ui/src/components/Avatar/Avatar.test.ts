@@ -13,7 +13,7 @@ describe('Avatar', () => {
       },
     })
     expect(wrapper.classes().join(' ')).toMatch(/bg-muted/)
-    expect(wrapper.classes().join(' ')).toMatch(/h-10/)
+    expect(wrapper.classes().join(' ')).toMatch(/h-8/)
     expect(wrapper.text()).toContain('JD')
   })
 
@@ -21,14 +21,14 @@ describe('Avatar', () => {
     const wrapper = mount(Avatar, {
       props: { size: 'sm' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-8')
+    expect(wrapper.classes().join(' ')).toContain('h-6')
   })
 
   it('applies the lg size', () => {
     const wrapper = mount(Avatar, {
       props: { size: 'lg' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-12')
+    expect(wrapper.classes().join(' ')).toContain('h-10')
   })
 
   it('merges consumer class after cva output', () => {

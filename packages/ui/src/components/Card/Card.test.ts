@@ -34,7 +34,7 @@ describe('Card', () => {
     })
     expect(wrapper.element.tagName).toBe('DIV')
     expect(wrapper.text()).toContain('header')
-    expect(wrapper.classes().join(' ')).toMatch(/p-6/)
+    expect(wrapper.classes().join(' ')).toMatch(/p-4/)
   })
 
   it('renders CardTitle as an h3', () => {

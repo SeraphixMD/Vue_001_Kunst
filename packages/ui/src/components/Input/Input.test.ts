@@ -8,21 +8,21 @@ describe('Input', () => {
     const wrapper = mount(Input)
     expect(wrapper.element.tagName).toBe('INPUT')
     expect(wrapper.classes().join(' ')).toMatch(/bg-background/)
-    expect(wrapper.classes().join(' ')).toMatch(/h-10/)
+    expect(wrapper.classes().join(' ')).toMatch(/h-8/)
   })
 
   it('applies the sm size', () => {
     const wrapper = mount(Input, {
       props: { size: 'sm' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-9')
+    expect(wrapper.classes().join(' ')).toContain('h-7')
   })
 
   it('applies the lg size', () => {
     const wrapper = mount(Input, {
       props: { size: 'lg' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-11')
+    expect(wrapper.classes().join(' ')).toContain('h-9')
   })
 
   it('merges consumer class after cva output', () => {

@@ -8,9 +8,9 @@ export const avatarVariants = cva(
         default: 'bg-muted',
       },
       size: {
-        sm: 'h-8 w-8',
-        default: 'h-10 w-10',
-        lg: 'h-12 w-12',
+        sm: 'h-6 w-6 text-xs',
+        default: 'h-8 w-8 text-sm',
+        lg: 'h-10 w-10',
       },
     },
     defaultVariants: {

@@ -13,7 +13,7 @@ const props = defineProps<{
     :as-child="props.asChild"
     :class="cn('overflow-hidden text-sm text-foreground', props.class)"
   >
-    <div class="pb-4 pt-0">
+    <div class="px-1 pb-4 pt-0">
       <slot />
     </div>
   </RekaAccordionContent>

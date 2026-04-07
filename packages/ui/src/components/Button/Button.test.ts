@@ -10,7 +10,7 @@ describe('Button', () => {
     })
     expect(wrapper.text()).toContain('hello')
     expect(wrapper.classes().join(' ')).toMatch(/bg-primary/)
-    expect(wrapper.classes().join(' ')).toMatch(/h-10/)
+    expect(wrapper.classes().join(' ')).toMatch(/h-8/)
   })
 
   it('applies the destructive variant', () => {
@@ -58,7 +58,7 @@ describe('Button', () => {
       props: { size: 'sm' },
       slots: { default: 'x' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-9')
+    expect(wrapper.classes().join(' ')).toContain('h-7')
   })
 
   it('applies the lg size', () => {
@@ -66,7 +66,7 @@ describe('Button', () => {
       props: { size: 'lg' },
       slots: { default: 'x' },
     })
-    expect(wrapper.classes().join(' ')).toContain('h-11')
+    expect(wrapper.classes().join(' ')).toContain('h-9')
   })
 
   it('applies the icon size', () => {
@@ -74,7 +74,7 @@ describe('Button', () => {
       props: { size: 'icon' },
       slots: { default: 'x' },
     })
-    expect(wrapper.classes().join(' ')).toContain('w-10')
+    expect(wrapper.classes().join(' ')).toContain('w-8')
   })
 
   it('merges consumer class after cva output', () => {

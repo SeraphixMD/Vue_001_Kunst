@@ -1,38 +1,38 @@
 /**
- * Base layer — dark variant definition + resets + dark-mode token overrides.
+ * Base layer - dark variant definition + resets + dark-mode token overrides.
  * Loaded after tokens.css. Consumers inherit everything automatically.
  */
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 .dark {
-  --color-background: oklch(0.145 0 0);
-  --color-foreground: oklch(0.985 0 0);
+  --color-background: oklch(0.14 0.01 250);
+  --color-foreground: oklch(0.93 0.006 250);
 
-  --color-card: oklch(0.145 0 0);
-  --color-card-foreground: oklch(0.985 0 0);
+  --color-card: oklch(0.17 0.012 250);
+  --color-card-foreground: oklch(0.93 0.006 250);
 
-  --color-popover: oklch(0.145 0 0);
-  --color-popover-foreground: oklch(0.985 0 0);
+  --color-popover: oklch(0.17 0.012 250);
+  --color-popover-foreground: oklch(0.93 0.006 250);
 
-  --color-primary: oklch(0.985 0 0);
-  --color-primary-foreground: oklch(0.205 0 0);
+  --color-primary: oklch(0.6 0.1 250);
+  --color-primary-foreground: oklch(0.14 0.01 250);
 
-  --color-secondary: oklch(0.269 0 0);
-  --color-secondary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.22 0.012 250);
+  --color-secondary-foreground: oklch(0.93 0.006 250);
 
-  --color-muted: oklch(0.269 0 0);
-  --color-muted-foreground: oklch(0.708 0 0);
+  --color-muted: oklch(0.22 0.012 250);
+  --color-muted-foreground: oklch(0.6 0.01 250);
 
-  --color-accent: oklch(0.269 0 0);
-  --color-accent-foreground: oklch(0.985 0 0);
+  --color-accent: oklch(0.25 0.015 250);
+  --color-accent-foreground: oklch(0.93 0.006 250);
 
-  --color-destructive: oklch(0.396 0.141 25.723);
-  --color-destructive-foreground: oklch(0.985 0 0);
+  --color-destructive: oklch(0.45 0.15 25);
+  --color-destructive-foreground: oklch(0.93 0.006 250);
 
-  --color-border: oklch(0.269 0 0);
-  --color-input: oklch(0.269 0 0);
-  --color-ring: oklch(0.439 0 0);
+  --color-border: oklch(0.26 0.012 250);
+  --color-input: oklch(0.28 0.012 250);
+  --color-ring: oklch(0.6 0.1 250);
 }
 
 @layer base {
@@ -44,8 +44,11 @@
 
   html {
     font-family: var(--font-sans);
+    font-size: 14px;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
