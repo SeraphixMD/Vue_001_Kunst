@@ -61,7 +61,7 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm --filter sink exec playwright install --with-deps chromium
       - run: pnpm --filter @kunst/ui test
       - run: pnpm --filter @kunst/eslint-plugin-ui test
 
