@@ -18,12 +18,12 @@ Every rule lives in four places that must stay in sync:
 ## Non-negotiables
 
 <!-- BEGIN:GENERATED:rules -->
-1. **No appearance utilities on library components.** `@kunst/ui/layout-utilities-only` enforces that `class` attributes on components imported from `@kunst/ui` contain only layout utilities. Allowed prefix count: 60. Denied prefix count: 24. See `docs/component-contract.md` for the full lists.
+1. **No appearance utilities on library components.** `@kunst/ui/layout-utilities-only` enforces that `class` attributes on components imported from `@kunst/ui` contain only layout utilities. Allowed prefix count: 56. Denied prefix count: 28. See `docs/component-contract.md` for the full lists.
 2. **No raw color values in library source.** `@kunst/ui/no-raw-color-tokens` forbids hex, rgb, hsl, oklch, oklab, lab, lch literals anywhere under `packages/ui/src/**` except inside `packages/ui/src/styles/tokens.css`. Reference semantic tokens via CSS variables or `bg-primary` / `text-foreground` utilities. Available color tokens: 19.
 3. **cva for all variants.** `@kunst/ui/require-cva-for-variants` enforces that components in `rulesConfig.variants.required` (Button, Input, Dialog, Avatar) define their variants in a sibling `{Name}.variants.ts` file via `class-variance-authority`. Hand-rolled class-string concatenation in SFCs is forbidden.
 4. **Explicit component contract.** `@kunst/ui/require-component-contract` requires every `packages/ui/src/components/*/index.ts` to re-export a `{Name}Props` type and have a sibling `{Name}.contract.ts` file.
 5. **Colocated tests.** `@kunst/ui/require-test-colocation` requires every `{Name}.vue` to have a sibling `{Name}.test.ts` in the same folder.
-6. **Scenarios for all components.** `@kunst/ui/require-scenario-for-component` requires every component in `rulesConfig.testing.requireScenarioFor` (7 components) to appear in `apps/sink/src/scenario-manifest.ts`.
+6. **Scenarios for all components.** `@kunst/ui/require-scenario-for-component` requires every component in `rulesConfig.testing.requireScenarioFor` (12 components) to appear in `apps/sink/src/scenario-manifest.ts`.
 7. **SSR safety.** No module-scope access to `window`, `document`, `localStorage`, `sessionStorage`, `navigator`, `location` in `packages/ui/src/**`. DOM access must happen inside `onMounted` or later lifecycle hooks.
 
 <!-- END:GENERATED:rules -->

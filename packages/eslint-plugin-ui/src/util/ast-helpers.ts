@@ -36,6 +36,9 @@ export function isLayoutUtility(
   const colonIdx = token.lastIndexOf(':')
   const bare = colonIdx >= 0 ? token.slice(colonIdx + 1) : token
 
+  // Arbitrary values (bracket notation like `w-[180px]`) are never layout utilities
+  if (bare.includes('[')) return false
+
   // Deny list takes priority
   for (const deny of denied) {
     if (deny.endsWith('-')) {

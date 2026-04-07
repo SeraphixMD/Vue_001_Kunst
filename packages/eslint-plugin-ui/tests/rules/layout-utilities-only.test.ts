@@ -141,6 +141,45 @@ const extra = 'mt-4'
       errors: [{ messageId: 'dynamicClass' }],
     },
     {
+      name: 'arbitrary value (bracket notation)',
+      code: `
+<script setup lang="ts">
+import { Button } from '@kunst/ui'
+</script>
+<template>
+  <Button class="w-[180px]">Click</Button>
+</template>
+      `,
+      filename: 'App.vue',
+      errors: [{ messageId: 'forbiddenUtility' }],
+    },
+    {
+      name: 'height utility on library component',
+      code: `
+<script setup lang="ts">
+import { Button } from '@kunst/ui'
+</script>
+<template>
+  <Button class="h-10">Click</Button>
+</template>
+      `,
+      filename: 'App.vue',
+      errors: [{ messageId: 'forbiddenUtility' }],
+    },
+    {
+      name: 'size utility on library component',
+      code: `
+<script setup lang="ts">
+import { Spinner } from '@kunst/ui'
+</script>
+<template>
+  <Spinner class="size-6" />
+</template>
+      `,
+      filename: 'App.vue',
+      errors: [{ messageId: 'forbiddenUtility' }],
+    },
+    {
       name: 'rounded utility',
       code: `
 <script setup lang="ts">

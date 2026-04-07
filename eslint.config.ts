@@ -59,6 +59,8 @@ export default tseslint.config(
       // Library components are single-word PascalCase by design (Button, Input, Card, …).
       // The ComponentName union in rules.config.ts is the source of truth for naming.
       'vue/multi-word-component-names': 'off',
+      // Optional `class` prop is standard on every component; no default needed.
+      'vue/require-default-prop': 'off',
     },
   },
 

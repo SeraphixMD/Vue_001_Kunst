@@ -34,6 +34,12 @@ interface VariantComponentProps<V extends string, S extends string>
 | **Dialog** | DialogRoot, DialogTrigger, DialogPortal, DialogOverlay, DialogContent, DialogTitle, DialogDescription, DialogClose | default | sm, default, lg | yes | trigger, header, title, description, content, footer |
 | **Accordion** | AccordionRoot, AccordionItem, AccordionHeader, AccordionTrigger, AccordionContent | default | — | yes | item, trigger, content |
 | **Avatar** | AvatarRoot, AvatarImage, AvatarFallback | default | sm, default, lg | no | image, fallback |
+| **Spinner** | _(from-scratch)_ | default | xs, sm, default, lg | no | — |
+| **Table** | _(from-scratch)_ | default | — | no | header, body, footer, row, head, cell, caption |
+| **Select** | SelectRoot, SelectTrigger, SelectValue, SelectPortal, SelectContent, SelectViewport, SelectItem, SelectItemText, SelectItemIndicator, SelectGroup, SelectLabel, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton | default | — | yes | trigger, content, item, group, label, separator |
+| **Tabs** | TabsRoot, TabsList, TabsTrigger, TabsContent, TabsIndicator | default | — | yes | list, trigger, content |
+| **Toast** | ToastProvider, ToastViewport, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose | default, destructive | — | no | title, description, action, close |
+| **Popover** | PopoverRoot, PopoverTrigger, PopoverPortal, PopoverContent, PopoverClose, PopoverArrow | default | — | yes | trigger, content |
 
 ## Design tokens
 
@@ -57,11 +63,11 @@ Enforced by `@kunst/ui/layout-utilities-only` on every library component usage i
 
 **Allowed prefixes:**
 
-`flex` · `inline-flex` · `grid` · `inline-grid` · `contents` · `block` · `inline` · `inline-block` · `hidden` · `gap-` · `gap-x-` · `gap-y-` · `space-x-` · `space-y-` · `m-` · `mx-` · `my-` · `mt-` · `mr-` · `mb-` · `ml-` · `ms-` · `me-` · `p-` · `px-` · `py-` · `pt-` · `pr-` · `pb-` · `pl-` · `ps-` · `pe-` · `w-` · `h-` · `min-w-` · `max-w-` · `min-h-` · `max-h-` · `size-` · `aspect-` · `col-` · `row-` · `col-span-` · `row-span-` · `col-start-` · `col-end-` · `row-start-` · `row-end-` · `order-` · `basis-` · `grow` · `grow-` · `shrink` · `shrink-` · `flex-` · `items-` · `justify-` · `self-` · `place-` · `content-`
+`flex` · `inline-flex` · `grid` · `inline-grid` · `contents` · `block` · `inline` · `inline-block` · `hidden` · `gap-` · `gap-x-` · `gap-y-` · `space-x-` · `space-y-` · `m-` · `mx-` · `my-` · `mt-` · `mr-` · `mb-` · `ml-` · `ms-` · `me-` · `p-` · `px-` · `py-` · `pt-` · `pr-` · `pb-` · `pl-` · `ps-` · `pe-` · `w-` · `min-w-` · `max-w-` · `aspect-` · `col-` · `row-` · `col-span-` · `row-span-` · `col-start-` · `col-end-` · `row-start-` · `row-end-` · `order-` · `basis-` · `grow` · `grow-` · `shrink` · `shrink-` · `flex-` · `items-` · `justify-` · `self-` · `place-` · `content-`
 
 **Denied prefixes:**
 
-`bg-` · `text-` · `from-` · `to-` · `via-` · `fill-` · `stroke-` · `border-` · `rounded-` · `divide-` · `outline-` · `font-` · `leading-` · `tracking-` · `uppercase` · `lowercase` · `capitalize` · `italic` · `shadow-` · `ring-` · `opacity-` · `backdrop-` · `blur-` · `brightness-`
+`bg-` · `text-` · `from-` · `to-` · `via-` · `fill-` · `stroke-` · `border-` · `rounded-` · `divide-` · `outline-` · `font-` · `leading-` · `tracking-` · `uppercase` · `lowercase` · `capitalize` · `italic` · `h-` · `min-h-` · `max-h-` · `size-` · `shadow-` · `ring-` · `opacity-` · `backdrop-` · `blur-` · `brightness-`
 
 ## SSR safety
 

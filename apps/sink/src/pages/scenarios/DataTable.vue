@@ -44,25 +44,40 @@ function clearFilters() {
   <div class="flex flex-col gap-4">
     <div class="flex items-center gap-3">
       <Select v-model="roleFilter">
-        <SelectTrigger class="w-[150px]">
+        <SelectTrigger class="w-38">
           <SelectValue placeholder="Filter by role" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="Admin">Admin</SelectItem>
-          <SelectItem value="Editor">Editor</SelectItem>
-          <SelectItem value="Viewer">Viewer</SelectItem>
+          <SelectItem value="Admin">
+            Admin
+          </SelectItem>
+          <SelectItem value="Editor">
+            Editor
+          </SelectItem>
+          <SelectItem value="Viewer">
+            Viewer
+          </SelectItem>
         </SelectContent>
       </Select>
       <Select v-model="statusFilter">
-        <SelectTrigger class="w-[150px]">
+        <SelectTrigger class="w-38">
           <SelectValue placeholder="Filter by status" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="Active">Active</SelectItem>
-          <SelectItem value="Inactive">Inactive</SelectItem>
+          <SelectItem value="Active">
+            Active
+          </SelectItem>
+          <SelectItem value="Inactive">
+            Inactive
+          </SelectItem>
         </SelectContent>
       </Select>
-      <Button variant="ghost" size="sm" @click="clearFilters">Clear</Button>
+      <Button
+        variant="ghost"
+        @click="clearFilters"
+      >
+        Clear
+      </Button>
     </div>
     <Table>
       <TableCaption>Team members ({{ filteredUsers.length }} of {{ allUsers.length }})</TableCaption>
@@ -75,7 +90,10 @@ function clearFilters() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        <TableRow v-for="user in filteredUsers" :key="user.email">
+        <TableRow
+          v-for="user in filteredUsers"
+          :key="user.email"
+        >
           <TableCell>{{ user.name }}</TableCell>
           <TableCell>{{ user.email }}</TableCell>
           <TableCell>{{ user.role }}</TableCell>

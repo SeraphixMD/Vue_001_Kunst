@@ -22,10 +22,18 @@ describe('Spinner', () => {
     expect(wrapper.attributes('aria-label')).toBe('Saving')
   })
 
-  it('merges consumer class', () => {
-    const wrapper = mount(Spinner, {
-      props: { class: 'size-6' },
-    })
+  it('applies default size class', () => {
+    const wrapper = mount(Spinner)
+    expect(wrapper.classes()).toContain('size-4')
+  })
+
+  it('applies xs size', () => {
+    const wrapper = mount(Spinner, { props: { size: 'xs' } })
+    expect(wrapper.classes()).toContain('size-3')
+  })
+
+  it('applies lg size', () => {
+    const wrapper = mount(Spinner, { props: { size: 'lg' } })
     expect(wrapper.classes()).toContain('size-6')
   })
 })

@@ -24,7 +24,9 @@ const invoices = [
     <TableCaption>A list of recent invoices.</TableCaption>
     <TableHeader>
       <TableRow>
-        <TableHead class="w-[100px]">Invoice</TableHead>
+        <TableHead class="w-25">
+          Invoice
+        </TableHead>
         <TableHead>Status</TableHead>
         <TableHead>Method</TableHead>
         <TableHead>Amount</TableHead>
@@ -35,16 +37,18 @@ const invoices = [
         v-for="invoice in invoices"
         :key="invoice.id"
       >
-        <TableCell >{{ invoice.id }}</TableCell>
+        <TableCell>{{ invoice.id }}</TableCell>
         <TableCell>{{ invoice.status }}</TableCell>
         <TableCell>{{ invoice.method }}</TableCell>
-        <TableCell >{{ invoice.amount }}</TableCell>
+        <TableCell>{{ invoice.amount }}</TableCell>
       </TableRow>
     </TableBody>
     <TableFooter>
       <TableRow>
-        <TableCell col-span="3">Total</TableCell>
-        <TableCell >$1,750.00</TableCell>
+        <TableCell col-span="3">
+          Total
+        </TableCell>
+        <TableCell>$1,750.00</TableCell>
       </TableRow>
     </TableFooter>
   </Table>

@@ -2,14 +2,22 @@
 import type { SpinnerProps } from './Spinner.contract.ts'
 import { cn } from '../../utils/cn.ts'
 
+const sizeClasses: Record<NonNullable<SpinnerProps['size']>, string> = {
+  xs: 'size-3',
+  sm: 'size-3.5',
+  default: 'size-4',
+  lg: 'size-6',
+}
+
 const props = withDefaults(defineProps<SpinnerProps>(), {
+  size: 'default',
   label: 'Loading',
 })
 </script>
 
 <template>
   <svg
-    :class="cn('size-4 animate-spin', props.class)"
+    :class="cn('animate-spin', sizeClasses[props.size], props.class)"
     :aria-label="props.label"
     role="status"
     xmlns="http://www.w3.org/2000/svg"

@@ -38,7 +38,9 @@ function remove(id: number) {
   <ToastProvider>
     <div class="flex flex-col gap-8">
       <section>
-        <h3 class="mb-3 text-sm font-medium text-muted-foreground">toast notifications</h3>
+        <h3 class="mb-3 text-sm font-medium text-muted-foreground">
+          toast notifications
+        </h3>
         <div class="flex flex-wrap gap-3">
           <Button @click="show({ title: 'Saved successfully', description: 'Your changes have been saved.' })">
             Success toast
@@ -59,14 +61,20 @@ function remove(id: number) {
       </section>
 
       <section>
-        <h3 class="mb-3 text-sm font-medium text-muted-foreground">popover info</h3>
+        <h3 class="mb-3 text-sm font-medium text-muted-foreground">
+          popover info
+        </h3>
         <Popover>
           <PopoverTrigger as-child>
-            <Button variant="outline">Notification preferences</Button>
+            <Button variant="outline">
+              Notification preferences
+            </Button>
           </PopoverTrigger>
           <PopoverContent>
             <div class="flex flex-col gap-2">
-              <h4 class="font-medium text-sm">Notification settings</h4>
+              <h4 class="font-medium text-sm">
+                Notification settings
+              </h4>
               <p class="text-sm text-muted-foreground">
                 Configure how and when you receive notifications. Changes apply immediately.
               </p>

@@ -138,14 +138,10 @@ export const rulesConfig: RulesConfig = {
       'pl-',
       'ps-',
       'pe-',
-      // Sizing for layout
+      // Sizing for layout (width only — height is component-internal via size prop)
       'w-',
-      'h-',
       'min-w-',
       'max-w-',
-      'min-h-',
-      'max-h-',
-      'size-',
       'aspect-',
       // Grid children
       'col-',
@@ -194,6 +190,11 @@ export const rulesConfig: RulesConfig = {
       'lowercase',
       'capitalize',
       'italic',
+      // Sizing — height is component-internal via size prop
+      'h-',
+      'min-h-',
+      'max-h-',
+      'size-',
       // Effects — locked by the library
       'shadow-',
       'ring-',
@@ -314,7 +315,7 @@ export const rulesConfig: RulesConfig = {
       name: 'Spinner',
       primitives: [],
       variants: ['default'],
-      sizes: [],
+      sizes: ['xs', 'sm', 'default', 'lg'],
       supportsAsChild: false,
       slots: [],
     },

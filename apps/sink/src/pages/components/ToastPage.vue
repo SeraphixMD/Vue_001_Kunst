@@ -35,7 +35,9 @@ function remove(id: number) {
   <ToastProvider>
     <div class="flex flex-col gap-8">
       <section>
-        <h3 class="mb-3 text-sm font-medium text-muted-foreground">variants</h3>
+        <h3 class="mb-3 text-sm font-medium text-muted-foreground">
+          variants
+        </h3>
         <div class="flex flex-wrap gap-3">
           <Button @click="show({ title: 'Changes saved', description: 'Your settings have been updated.', variant: 'default' })">
             Show default toast
