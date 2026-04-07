@@ -20,6 +20,7 @@ export type ComponentName =
   | 'Dialog'
   | 'Accordion'
   | 'Avatar'
+  | 'Spinner'
 
 export interface ComponentSpec {
   /** PascalCase display name, matches the component folder. */
@@ -303,6 +304,14 @@ export const rulesConfig: RulesConfig = {
       sizes: ['sm', 'default', 'lg'],
       supportsAsChild: false,
       slots: ['image', 'fallback'],
+    },
+    Spinner: {
+      name: 'Spinner',
+      primitives: [],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: false,
+      slots: [],
     },
   },
 

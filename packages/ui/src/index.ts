@@ -14,6 +14,7 @@ export * from './components/Card/index.ts'
 export * from './components/Dialog/index.ts'
 export * from './components/Input/index.ts'
 export * from './components/Label/index.ts'
+export * from './components/Spinner/index.ts'
 // @kunst/ui:components-end
 
 export { cn } from './utils/cn.ts'

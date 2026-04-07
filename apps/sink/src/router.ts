@@ -14,6 +14,7 @@ const componentPageLoaders: Record<ComponentName, () => Promise<unknown>> = {
   Dialog: () => import('./pages/components/DialogPage.vue'),
   Accordion: () => import('./pages/components/AccordionPage.vue'),
   Avatar: () => import('./pages/components/AvatarPage.vue'),
+  Spinner: () => import('./pages/components/SpinnerPage.vue'),
 }
 
 const componentRoutes: RouteRecordRaw[] = (
@@ -32,6 +33,7 @@ const scenarioPageLoaders: Record<string, () => Promise<unknown>> = {
   'settings-panel': () => import('./pages/scenarios/SettingsPanel.vue'),
   'confirm-delete-flow': () => import('./pages/scenarios/ConfirmDeleteFlow.vue'),
   'profile-card': () => import('./pages/scenarios/ProfileCard.vue'),
+  'async-action': () => import('./pages/scenarios/AsyncAction.vue'),
 }
 
 const scenarioRoutes: RouteRecordRaw[] = scenarios

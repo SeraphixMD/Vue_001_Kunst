@@ -54,6 +54,13 @@ export const scenarios: Scenario[] = [
     components: ['Card', 'Avatar', 'Button'],
     tags: ['card', 'identity'],
   },
+  {
+    id: 'async-action',
+    title: 'Async action',
+    path: '/scenarios/async-action',
+    components: ['Button', 'Spinner'],
+    tags: ['loading', 'composition'],
+  },
 ]
 
 export default scenarios
