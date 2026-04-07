@@ -65,8 +65,8 @@ export const scenarios: Scenario[] = [
     id: 'data-table',
     title: 'Data table',
     path: '/scenarios/data-table',
-    components: ['Table', 'Select', 'Button'],
-    tags: ['table', 'filtering'],
+    components: ['Table', 'Select', 'Button', 'Pagination', 'Badge'],
+    tags: ['table', 'filtering', 'pagination'],
   },
   {
     id: 'tabbed-settings',

@@ -40,6 +40,8 @@ interface VariantComponentProps<V extends string, S extends string>
 | **Tabs** | TabsRoot, TabsList, TabsTrigger, TabsContent, TabsIndicator | default | — | yes | list, trigger, content |
 | **Toast** | ToastProvider, ToastViewport, ToastRoot, ToastTitle, ToastDescription, ToastAction, ToastClose | default, destructive | — | no | title, description, action, close |
 | **Popover** | PopoverRoot, PopoverTrigger, PopoverPortal, PopoverContent, PopoverClose, PopoverArrow | default | — | yes | trigger, content |
+| **Pagination** | _(from-scratch)_ | default | — | no | content, item, link, previous, next, ellipsis |
+| **Badge** | _(from-scratch)_ | default, secondary, destructive, outline | — | no | — |
 
 ## Design tokens
 

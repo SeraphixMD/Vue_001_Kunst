@@ -20,6 +20,8 @@ const componentPageLoaders: Record<ComponentName, () => Promise<unknown>> = {
   Tabs: () => import('./pages/components/TabsPage.vue'),
   Toast: () => import('./pages/components/ToastPage.vue'),
   Popover: () => import('./pages/components/PopoverPage.vue'),
+  Pagination: () => import('./pages/components/PaginationPage.vue'),
+  Badge: () => import('./pages/components/BadgePage.vue'),
 }
 
 const componentRoutes: RouteRecordRaw[] = (

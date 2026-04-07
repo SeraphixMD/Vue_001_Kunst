@@ -26,6 +26,8 @@ export type ComponentName =
   | 'Tabs'
   | 'Toast'
   | 'Popover'
+  | 'Pagination'
+  | 'Badge'
 
 export interface ComponentSpec {
   /** PascalCase display name, matches the component folder. */
@@ -395,16 +397,32 @@ export const rulesConfig: RulesConfig = {
       supportsAsChild: true,
       slots: ['trigger', 'content'],
     },
+    Pagination: {
+      name: 'Pagination',
+      primitives: [],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: false,
+      slots: ['content', 'item', 'link', 'previous', 'next', 'ellipsis'],
+    },
+    Badge: {
+      name: 'Badge',
+      primitives: [],
+      variants: ['default', 'secondary', 'destructive', 'outline'],
+      sizes: [],
+      supportsAsChild: false,
+      slots: [],
+    },
   },
 
   variants: {
-    required: ['Button', 'Input', 'Dialog', 'Avatar'],
+    required: ['Button', 'Input', 'Dialog', 'Avatar', 'Badge'],
   },
 
   testing: {
     colocationPattern: '{component}.test.ts',
     scenarioManifestPath: 'apps/sink/src/scenario-manifest.ts',
-    requireScenarioFor: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover'],
+    requireScenarioFor: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover', 'Pagination', 'Badge'],
   },
 
   ssr: {
@@ -416,7 +434,7 @@ export const rulesConfig: RulesConfig = {
       'navigator',
       'location',
     ],
-    requireNuxtScenario: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover'],
+    requireNuxtScenario: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover', 'Pagination', 'Badge'],
   },
 
   eslint: {

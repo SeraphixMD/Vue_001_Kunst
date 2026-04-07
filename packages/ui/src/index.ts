@@ -20,6 +20,8 @@ export * from './components/Select/index.ts'
 export * from './components/Tabs/index.ts'
 export * from './components/Toast/index.ts'
 export * from './components/Popover/index.ts'
+export * from './components/Pagination/index.ts'
+export * from './components/Badge/index.ts'
 // @kunst/ui:components-end
 
 export { cn } from './utils/cn.ts'
