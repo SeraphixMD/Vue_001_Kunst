@@ -54,6 +54,10 @@ scripts/
   ci/*.sh             — portable CI logic (thin shell wrappers called by GH Actions)
 ```
 
+## Reference documentation
+
+- `.claude/reka-ui-llms.txt` - Reka UI component and utility index. Read this file when wrapping Reka primitives to find the correct component names, props, and guides (styling, composition, SSR, animation).
+
 ## Commands
 
 - `pnpm verify:quick` — fast gate: lint + typecheck + rule-coverage (under 15s)

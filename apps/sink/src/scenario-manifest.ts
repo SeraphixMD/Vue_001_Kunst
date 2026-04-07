@@ -61,6 +61,27 @@ export const scenarios: Scenario[] = [
     components: ['Button', 'Spinner'],
     tags: ['loading', 'composition'],
   },
+  {
+    id: 'data-table',
+    title: 'Data table',
+    path: '/scenarios/data-table',
+    components: ['Table', 'Select', 'Button'],
+    tags: ['table', 'filtering'],
+  },
+  {
+    id: 'tabbed-settings',
+    title: 'Tabbed settings',
+    path: '/scenarios/tabbed-settings',
+    components: ['Tabs', 'Card', 'Label', 'Input', 'Button', 'Select'],
+    tags: ['tabs', 'form'],
+  },
+  {
+    id: 'notifications',
+    title: 'Notifications',
+    path: '/scenarios/notifications',
+    components: ['Toast', 'Button', 'Popover'],
+    tags: ['toast', 'popover', 'feedback'],
+  },
 ]
 
 export default scenarios

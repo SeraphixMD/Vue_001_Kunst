@@ -15,6 +15,11 @@ export * from './components/Dialog/index.ts'
 export * from './components/Input/index.ts'
 export * from './components/Label/index.ts'
 export * from './components/Spinner/index.ts'
+export * from './components/Table/index.ts'
+export * from './components/Select/index.ts'
+export * from './components/Tabs/index.ts'
+export * from './components/Toast/index.ts'
+export * from './components/Popover/index.ts'
 // @kunst/ui:components-end
 
 export { cn } from './utils/cn.ts'

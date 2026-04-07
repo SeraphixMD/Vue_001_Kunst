@@ -15,6 +15,11 @@ const componentPageLoaders: Record<ComponentName, () => Promise<unknown>> = {
   Accordion: () => import('./pages/components/AccordionPage.vue'),
   Avatar: () => import('./pages/components/AvatarPage.vue'),
   Spinner: () => import('./pages/components/SpinnerPage.vue'),
+  Table: () => import('./pages/components/TablePage.vue'),
+  Select: () => import('./pages/components/SelectPage.vue'),
+  Tabs: () => import('./pages/components/TabsPage.vue'),
+  Toast: () => import('./pages/components/ToastPage.vue'),
+  Popover: () => import('./pages/components/PopoverPage.vue'),
 }
 
 const componentRoutes: RouteRecordRaw[] = (
@@ -34,6 +39,9 @@ const scenarioPageLoaders: Record<string, () => Promise<unknown>> = {
   'confirm-delete-flow': () => import('./pages/scenarios/ConfirmDeleteFlow.vue'),
   'profile-card': () => import('./pages/scenarios/ProfileCard.vue'),
   'async-action': () => import('./pages/scenarios/AsyncAction.vue'),
+  'data-table': () => import('./pages/scenarios/DataTable.vue'),
+  'tabbed-settings': () => import('./pages/scenarios/TabbedSettings.vue'),
+  'notifications': () => import('./pages/scenarios/Notifications.vue'),
 }
 
 const scenarioRoutes: RouteRecordRaw[] = scenarios

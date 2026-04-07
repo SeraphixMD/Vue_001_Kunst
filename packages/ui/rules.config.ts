@@ -21,6 +21,11 @@ export type ComponentName =
   | 'Accordion'
   | 'Avatar'
   | 'Spinner'
+  | 'Table'
+  | 'Select'
+  | 'Tabs'
+  | 'Toast'
+  | 'Popover'
 
 export interface ComponentSpec {
   /** PascalCase display name, matches the component folder. */
@@ -313,6 +318,82 @@ export const rulesConfig: RulesConfig = {
       supportsAsChild: false,
       slots: [],
     },
+    Table: {
+      name: 'Table',
+      primitives: [],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: false,
+      slots: ['header', 'body', 'footer', 'row', 'head', 'cell', 'caption'],
+    },
+    Select: {
+      name: 'Select',
+      primitives: [
+        'SelectRoot',
+        'SelectTrigger',
+        'SelectValue',
+        'SelectPortal',
+        'SelectContent',
+        'SelectViewport',
+        'SelectItem',
+        'SelectItemText',
+        'SelectItemIndicator',
+        'SelectGroup',
+        'SelectLabel',
+        'SelectSeparator',
+        'SelectScrollUpButton',
+        'SelectScrollDownButton',
+      ],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: true,
+      slots: ['trigger', 'content', 'item', 'group', 'label', 'separator'],
+    },
+    Tabs: {
+      name: 'Tabs',
+      primitives: [
+        'TabsRoot',
+        'TabsList',
+        'TabsTrigger',
+        'TabsContent',
+        'TabsIndicator',
+      ],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: true,
+      slots: ['list', 'trigger', 'content'],
+    },
+    Toast: {
+      name: 'Toast',
+      primitives: [
+        'ToastProvider',
+        'ToastViewport',
+        'ToastRoot',
+        'ToastTitle',
+        'ToastDescription',
+        'ToastAction',
+        'ToastClose',
+      ],
+      variants: ['default', 'destructive'],
+      sizes: [],
+      supportsAsChild: false,
+      slots: ['title', 'description', 'action', 'close'],
+    },
+    Popover: {
+      name: 'Popover',
+      primitives: [
+        'PopoverRoot',
+        'PopoverTrigger',
+        'PopoverPortal',
+        'PopoverContent',
+        'PopoverClose',
+        'PopoverArrow',
+      ],
+      variants: ['default'],
+      sizes: [],
+      supportsAsChild: true,
+      slots: ['trigger', 'content'],
+    },
   },
 
   variants: {
@@ -322,7 +403,7 @@ export const rulesConfig: RulesConfig = {
   testing: {
     colocationPattern: '{component}.test.ts',
     scenarioManifestPath: 'apps/sink/src/scenario-manifest.ts',
-    requireScenarioFor: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar'],
+    requireScenarioFor: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover'],
   },
 
   ssr: {
@@ -334,7 +415,7 @@ export const rulesConfig: RulesConfig = {
       'navigator',
       'location',
     ],
-    requireNuxtScenario: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar'],
+    requireNuxtScenario: ['Button', 'Input', 'Label', 'Card', 'Dialog', 'Accordion', 'Avatar', 'Table', 'Select', 'Tabs', 'Toast', 'Popover'],
   },
 
   eslint: {

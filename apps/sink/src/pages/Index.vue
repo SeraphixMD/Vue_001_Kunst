@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import type { ComponentName } from '@kunst/ui/rules-config'
+import { RouterLink, useRouter } from 'vue-router'
 
 import scenarios from '../scenario-manifest.ts'
 
-const components: readonly ComponentName[] = [
-  'Button',
-  'Input',
-  'Label',
-  'Card',
-  'Dialog',
-  'Accordion',
-  'Avatar',
-]
+const router = useRouter()
+const components = router.getRoutes()
+  .filter((r) => r.meta?.kind === 'component')
+  .map((r) => r.meta.label as string)
 </script>
 
 <template>
